@@ -11,6 +11,13 @@ app.use(cors());
 app.use(express.json());
 
 
+
+app.get('/', function (req, res) {
+    res.send('Saludos desde express Pagos');
+});
+
+
+
 app.post('/stripe_checkout', async (req, res)=>{
     const stripeToken = req.body.stripeToken;
     const cantidad = req.body.cantidad;
